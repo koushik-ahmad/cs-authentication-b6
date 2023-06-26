@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Color from "./Color";
 import "./Generator.css";
+import { AuthContext } from "../../contexts/auth.context";
+import { useNavigate } from "react-router-dom";
 
 
 const Generator = () => {
+
     const [state, setState] = useState({
         colorsNum: 5,
         colors: [],
